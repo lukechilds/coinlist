@@ -1,5 +1,5 @@
 import test from 'ava';
-import coins from '../';
+import coins from 'this';
 
 test('coins is an array', t => {
 	t.true(Array.isArray(coins));
