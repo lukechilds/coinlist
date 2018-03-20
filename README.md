@@ -63,6 +63,15 @@ coins.filter(coin => coin.maxSupply > 10000000000).map(coin => coin.name);
 const coinsJson = require('coinlist/src/coins.json');
 ```
 
+## Update
+
+```shell
+$ yarn update
+Fetching data...
+Written 1567 coins to src/coins.json
+✨  Done in 0.52s.
+```
+
 ## License
 
 MIT © Luke Childs
