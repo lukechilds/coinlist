@@ -72,6 +72,10 @@ Written 1567 coins to src/coins.json
 ✨  Done in 0.52s.
 ```
 
+## Contributing
+
+Pull requests are welcome to improve the code but please don't add currencies to `coins.json` directly. The JSON is automatically generated from the update script.
+
 ## License
 
 MIT © Luke Childs
