@@ -29,3 +29,9 @@ test('coins.get searches symbols', t => {
 test('coins.get isn\'t case sensitive', t => {
 	t.deepEqual(coins.get('BTC'), coins.get('btc'));
 });
+
+test('coins.get accepts a property argument', t => {
+	const expectedName = 'Bitcoin';
+	const actualName = coins.get('BTC', 'name');
+	t.is(expectedName, actualName);
+});
