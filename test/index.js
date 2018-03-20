@@ -15,7 +15,7 @@ test('coin object has expected properties', t => {
 	t.deepEqual(expectedKeys, actualKeys);
 });
 
-test('coin.get helper method seaarches symbols', t => {
+test('coin.get helper method searches symbols', t => {
 	const expectedBtc = {
 		id: 'bitcoin',
 		symbol: 'BTC',
