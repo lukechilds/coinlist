@@ -4,7 +4,7 @@
   "description": "Comprehensive list of cryptocurrencies with metadata",
   "main": "src/index.js",
   "scripts": {
-    "build": "node ./build",
+    "update": "node ./update",
     "test": "xo && nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
