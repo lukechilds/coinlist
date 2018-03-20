@@ -45,6 +45,12 @@ const btc = coins.get('BTC');
   maxSupply: 21000000
 }
 
+// Or get a specific property
+coins.get('BTC', 'name');
+// "Bitcoin"
+coins.get('BTC', 'maxSupply');
+// 21000000
+
 // You can still use all the usual array methods on coins:
 coins.filter(coin => coin.maxSupply > 10000000000).map(coin => coin.name);
 [
