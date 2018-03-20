@@ -45,7 +45,7 @@ const btc = coins.get('BTC');
   maxSupply: 21000000
 }
 
-// coins is jsut an array, you can still use all the usual array methods:
+// You can still use all the usual array methods on coins:
 coins.filter(coin => coin.maxSupply > 10000000000).map(coin => coin.name);
 [
   'Ripple',
