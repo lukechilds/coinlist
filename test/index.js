@@ -15,7 +15,7 @@ test('coin object has expected properties', t => {
 	t.deepEqual(expectedKeys, actualKeys);
 });
 
-test('coin.get helper method searches symbols', t => {
+test('coins.get searches symbols', t => {
 	const expectedBtc = {
 		id: 'bitcoin',
 		symbol: 'BTC',
@@ -26,6 +26,6 @@ test('coin.get helper method searches symbols', t => {
 	t.deepEqual(expectedBtc, actualBtc);
 });
 
-test('coin.get helper method isn\'t case sensitive', t => {
+test('coins.get isn\'t case sensitive', t => {
 	t.deepEqual(coins.get('BTC'), coins.get('btc'));
 });
