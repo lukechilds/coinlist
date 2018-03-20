@@ -25,3 +25,7 @@ test('coin.get helper method seaarches symbols', t => {
 	const actualBtc = coins.get('BTC');
 	t.deepEqual(expectedBtc, actualBtc);
 });
+
+test('coin.get helper method isn\'t case sensitive', t => {
+	t.deepEqual(coins.get('BTC'), coins.get('btc'));
+});
