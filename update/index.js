@@ -6,7 +6,7 @@ const writeJsonFile = require('write-json-file');
 const jsonFile = 'src/coins.json';
 
 (async () => {
-	console.log(`Fetching data...`);
+	console.log(`Fetching latest currencies from the coinmarketcap.com API...`);
 	const response = await got('https://api.coinmarketcap.com/v1/ticker/?limit=0', { json: true });
 	const coins = response.body
 		.map(coin => ({
