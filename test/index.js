@@ -40,3 +40,7 @@ test('coins.get returns undefined if a coin doesn\'t exist', t => {
 	t.is(coins.get('nonexistent'), undefined);
 	t.is(coins.get('nonexistent', 'name'), undefined);
 });
+
+test('coins.get throws a TypeError on invalid property', t => {
+	t.throws(() => coins.get('BTC', 'invalidprop'));
+});
