@@ -35,3 +35,8 @@ test('coins.get accepts a property argument', t => {
 	const actualName = coins.get('BTC', 'name');
 	t.is(expectedName, actualName);
 });
+
+test('coins.get returns undefined if a coin doesn\'t exist', t => {
+	t.is(coins.get('nonexistent'), undefined);
+	t.is(coins.get('nonexistent', 'name'), undefined);
+});
