@@ -52,6 +52,9 @@ coins.filter(coin => coin.maxSupply > 10000000000).map(coin => coin.name);
   'Cardano',
   ...
 ]
+
+// Alternatively, you can load the raw JSON file:
+const coinsJson = require('coinlist/src/coins.json');
 ```
 
 ## License
