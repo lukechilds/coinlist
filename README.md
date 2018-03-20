@@ -65,11 +65,11 @@ const coinsJson = require('coinlist/src/coins.json');
 
 ## Update Coins
 
-```shell
+```
 coinlist $ yarn update
 Fetching latest currencies from the coinmarketcap.com API...
 Written 1567 coins to src/coins.json
-✨  Done in 0.52s.
+✨ Done in 0.52s.
 ```
 
 ## Contributing
