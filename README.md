@@ -1,7 +1,5 @@
 # coinlist
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/lukechilds/coinlist.svg)](https://greenkeeper.io/)
-
 > Comprehensive list of cryptocurrencies with metadata
 
 [![Build Status](https://travis-ci.org/lukechilds/coinlist.svg?branch=master)](https://travis-ci.org/lukechilds/coinlist)
