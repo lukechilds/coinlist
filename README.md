@@ -17,7 +17,41 @@ yarn add coinlist
 ## Usage
 
 ```js
-// TODO
+const coins = require('coinlist');
+
+// coins is an array of coin objects:
+[
+  {
+    id: 'bitcoin',
+    symbol: 'BTC',
+    name: 'Bitcoin',
+    maxSupply: 21000000
+  },
+  {
+    id: 'ethereum',
+    symbol: 'ETH',
+    name: 'Ethereum',
+    maxSupply: null
+  },
+  ...
+]
+
+// There is a useful helper method to search the array for a ticker symbol:
+const btc = coins.get('BTC');
+{
+  id: 'bitcoin',
+  symbol: 'BTC',
+  name: 'Bitcoin',
+  maxSupply: 21000000
+}
+
+// coins is jsut an array, you can still use all the usual array methods:
+coins.filter(coin => coin.maxSupply > 10000000000).map(coin => coin.name);
+[
+  'Ripple',
+  'Cardano',
+  ...
+]
 ```
 
 ## License
