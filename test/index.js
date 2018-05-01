@@ -17,7 +17,7 @@ test('coin object has expected properties', t => {
 
 test('coins.get searches symbols', t => {
 	const expectedBtc = {
-		id: 'bitcoin',
+		id: 1,
 		symbol: 'BTC',
 		name: 'Bitcoin',
 		maxSupply: 21000000
