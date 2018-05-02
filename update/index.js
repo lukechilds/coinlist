@@ -39,7 +39,8 @@ const getCoins = () => {
 			symbol: coin.symbol,
 			name: coin.name,
 			maxSupply: Number.parseFloat(coin.max_supply)
-		}));
+		}))
+		.sort((a, b) => a.id - b.id);
 
 	await writeJsonFile(jsonFile, coins);
 	console.log(`Written ${coins.length} coins to ${jsonFile}`);
