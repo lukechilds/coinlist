@@ -63,6 +63,39 @@ coins.filter(coin => coin.maxSupply > 10000000000).map(coin => coin.name);
 const coinsJson = require('coinlist/src/coins.json');
 ```
 
+## API
+
+### coins
+
+An array of coin objects.
+
+### coins.get(symbol, [property])
+
+Returns a coin object.
+
+Alternatively returns a coin property if the `property` argument is defined.
+
+If the symbol cannot be found it will return `undefined`.
+
+#### symbol
+
+Type: `string`
+
+The coin ticker symbol to search the array for.
+
+#### property
+
+Type: `string`
+
+A single coin property to return instead of the entire coin object.
+
+Valid properties are:
+
+- `id` The CoinMarketCap API id.
+- `symbol` The ticker symbol.
+- `name` The readable name.
+- `maxSupply` The maximum supply of units.
+
 ## Update Coins
 
 ```
