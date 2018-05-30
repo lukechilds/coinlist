@@ -7,15 +7,12 @@ const jsonFile = 'src/coins.json';
 
 (async () => {
 	console.log(`Fetching latest currencies from the coinmarketcap.com API...`);
-	const response = await got('https://api.coinmarketcap.com/v1/ticker/?limit=0', { json: true });
-	const coins = response.body
-		.map(coin => ({
-			id: coin.id,
-			symbol: coin.symbol,
-			name: coin.name,
-			maxSupply: parseFloat(coin.max_supply)
-		}))
-		.sort((a, b) => a.id.localeCompare(b.id));
+	const response = await got('https://api.coinmarketcap.com/v2/listings/', { json: true });
+	const coins = response.body.data.map(coin => {
+		const { id, symbol, name } = coin;
+
+		return { id, symbol, name };
+	});
 	await writeJsonFile(jsonFile, coins);
 	console.log(`Written ${coins.length} coins to ${jsonFile}`);
 })();

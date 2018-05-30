@@ -10,17 +10,17 @@ test('coins contains more than 0 coins', t => {
 });
 
 test('coin object has expected properties', t => {
-	const expectedKeys = ['id', 'symbol', 'name', 'maxSupply'];
-	const actualKeys = Object.keys(coins[0]);
+	const expectedKeys = ['id', 'symbol', 'name'].sort();
+	const actualKeys = Object.keys(coins[0]).sort();
+
 	t.deepEqual(expectedKeys, actualKeys);
 });
 
 test('coins.get searches symbols', t => {
 	const expectedBtc = {
-		id: 'bitcoin',
+		id: 1,
 		symbol: 'BTC',
-		name: 'Bitcoin',
-		maxSupply: 21000000
+		name: 'Bitcoin'
 	};
 	const actualBtc = coins.get('BTC');
 	t.deepEqual(expectedBtc, actualBtc);

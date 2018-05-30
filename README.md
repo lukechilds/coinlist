@@ -22,16 +22,14 @@ const coins = require('coinlist');
 // coins is an array of coin objects:
 [
   {
-    id: 'bitcoin',
+    id: 1,
     symbol: 'BTC',
-    name: 'Bitcoin',
-    maxSupply: 21000000
+    name: 'Bitcoin'
   },
   {
-    id: 'ethereum',
-    symbol: 'ETH',
-    name: 'Ethereum',
-    maxSupply: null
+    id: 2,
+    symbol: 'LTC',
+    name: 'Litecoin'
   },
   ...
 ]
@@ -39,23 +37,20 @@ const coins = require('coinlist');
 // There is a useful helper method to search the array for a ticker symbol:
 const btc = coins.get('BTC');
 {
-  id: 'bitcoin',
+  id: 1,
   symbol: 'BTC',
-  name: 'Bitcoin',
-  maxSupply: 21000000
+  name: 'Bitcoin'
 }
 
 // Or get a specific property
 coins.get('BTC', 'name');
 // "Bitcoin"
-coins.get('BTC', 'maxSupply');
-// 21000000
 
 // You can still use all the usual array methods on coins:
-coins.filter(coin => coin.maxSupply > 10000000000).map(coin => coin.name);
+coins.map(coin => coin.name);
 [
-  'Ripple',
-  'Cardano',
+  'BTC',
+  'LTC',
   ...
 ]
 
@@ -94,15 +89,14 @@ Valid properties are:
 - `id` The CoinMarketCap API id.
 - `symbol` The ticker symbol.
 - `name` The readable name.
-- `maxSupply` The maximum supply of units.
 
 ## Update Coins
 
 ```
-coinlist $ yarn update
+$ yarn update
 Fetching latest currencies from the coinmarketcap.com API...
-Written 1567 coins to src/coins.json
-✨ Done in 0.52s.
+Written 1633 coins to src/coins.json
+✨ Done in 0.85s.
 ```
 
 ## Contributing
