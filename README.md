@@ -6,7 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/coinlist/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/coinlist?branch=master)
 [![npm](https://img.shields.io/npm/v/coinlist.svg)](https://www.npmjs.com/package/coinlist)
 
-List compiled from the coinmarketcap.com API. Importable as a raw JSON file or an array with helper methods.
+List compiled from the [coingecko.com API](https://www.coingecko.com/api/docs/v3). Importable as a raw JSON file or an array with helper methods.
 
 ## Install
 
@@ -22,12 +22,12 @@ const coins = require('coinlist');
 // coins is an array of coin objects:
 [
   {
-    id: 1,
+    id: 'bitcoin',
     symbol: 'BTC',
     name: 'Bitcoin'
   },
   {
-    id: 2,
+    id: 'litecoin',
     symbol: 'LTC',
     name: 'Litecoin'
   },
@@ -86,7 +86,7 @@ A single coin property to return instead of the entire coin object.
 
 Valid properties are:
 
-- `id` The CoinMarketCap API id.
+- `id` The CoinGecko API id.
 - `symbol` The ticker symbol.
 - `name` The readable name.
 
@@ -94,9 +94,8 @@ Valid properties are:
 
 ```
 $ yarn update
-Fetching latest currencies from the coinmarketcap.com API...
-Written 1633 coins to src/coins.json
-✨ Done in 0.85s.
+Fetching latest currencies from the coingecko.com API...
+Written 2306 coins to src/coins.json
 ```
 
 ## Contributing
