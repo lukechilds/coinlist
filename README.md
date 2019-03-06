@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/lukechilds/coinlist.svg?branch=master)](https://travis-ci.org/lukechilds/coinlist)
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/coinlist/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/coinlist?branch=master)
 [![npm](https://img.shields.io/npm/v/coinlist.svg)](https://www.npmjs.com/package/coinlist)
+[![tippin.me](https://badgen.net/badge/%E2%9A%A1%EF%B8%8Ftippin.me/@lukechilds/F0918E)](https://tippin.me/@lukechilds)
 
 List compiled from the [coingecko.com API](https://www.coingecko.com/api/docs/v3). Importable as a raw JSON file or an array with helper methods.
 
