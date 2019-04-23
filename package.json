@@ -1,6 +1,6 @@
 {
   "name": "coinlist",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Comprehensive list of cryptocurrencies with metadata",
   "main": "src/index.js",
   "scripts": {
